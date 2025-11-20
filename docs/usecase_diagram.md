@@ -1,24 +1,20 @@
 ```mermaid
-flowchart LR
+flowchart TD
 
     %% Actors
     Student([👤 Student])
     Staff([👤 Dormitory Staff])
     Admin([👤 Admin])
 
-    %% Student Use Cases
-    UC1((Reserve Room / Bed))
-    UC2((View Reservations))
-    UC3((Request Service))
-    UC4((View Service History))
-
-    %% Staff Use Cases
-    UC5((Update Service Status))
-    UC6((Generate Invoice))
-
-    %% Admin Use Cases
+    %% Use Cases
+    UC1((Reserve Room))
+    UC2((Check Room Availability))
+    UC3((Request Services))
+    UC4((View My Service History))
+    UC5((Approve Requests))
+    UC6((Generate Billing))
     UC7((Manage Students))
-    UC8((Manage Rooms))
+    UC8((Manage Rooms & Beds))
 
     %% Connections
     Student --> UC1
@@ -32,7 +28,14 @@ flowchart LR
 
     Admin --> UC7
     Admin --> UC8
+
+    %% Style Use Cases (تمام دایره‌ها سبز)
+    style UC1 fill:#90EE90,stroke:#333,stroke-width:2px
+    style UC2 fill:#90EE90,stroke:#333,stroke-width:2px
+    style UC3 fill:#90EE90,stroke:#333,stroke-width:2px
+    style UC4 fill:#90EE90,stroke:#333,stroke-width:2px
+    style UC5 fill:#90EE90,stroke:#333,stroke-width:2px
+    style UC6 fill:#90EE90,stroke:#333,stroke-width:2px
+    style UC7 fill:#90EE90,stroke:#333,stroke-width:2px
+    style UC8 fill:#90EE90,stroke:#333,stroke-width:2px
 ```
-
-
-
